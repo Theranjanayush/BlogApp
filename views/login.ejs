@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<body class="bg-zinc-900 font-sans antialiased text-white">
+    <div class="min-h-screen flex flex-col items-center p-10">
+
+        <!-- Navigation -->
+        <nav class="mb-12 flex gap-6">
+            <a class="text-zinc-400 hover:text-blue-500 transition-colors" href="/read">Read users</a>
+            <a class="text-blue-500 font-semibold border-b-2 border-blue-500 pb-1" href="/create">User Login</a>
+        </nav>
+
+        <!-- Form Container -->
+        <div class="w-full max-w-sm bg-zinc-800/50 p-8 rounded-2xl border border-zinc-800 shadow-xl">
+            <form action="/login" method="POST" class="flex flex-col gap-5">
+                <h1 class="text-3xl font-bold mb-2">User Login</h1>
+
+                <!-- Name Input -->
+                <div class="flex flex-col gap-1">
+                    <label class="text-xs font-medium text-zinc-500 uppercase tracking-wider ml-1">Email Address</label>
+                    <input name="email"
+                        class="px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-xl outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
+                        type="email" placeholder="john@example.com" required>
+                </div>
+
+                
+
+            
+
+                <!-- Password Input -->
+                <div class="flex flex-col gap-1">
+                    <label class="text-xs font-medium text-zinc-500 uppercase tracking-wider ml-1">
+                        Password
+                    </label>
+                    <input class="px-4 py-3 bg-zinc-900 border border-zinc-700 rounded-xl outline-none 
+               focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all" type="password"
+                        placeholder="Enter password" name="password" required>
+                </div>
+
+
+                <!-- Submit Button -->
+                <button type="submit"
+                    class="mt-2 px-5 py-3 bg-blue-600 hover:bg-blue-500 active:scale-95 text-white font-semibold rounded-xl transition-all shadow-lg shadow-blue-600/20">
+                    Login
+                </button>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>
